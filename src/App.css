@@ -1,0 +1,152 @@
+#root {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background-color: #000;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  margin: 0 300px; /* Increased from 200px to match new sidebar width */
+  min-height: 100vh;
+  padding-top: 80px; /* Space for navbar */
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin: 0;
+  }
+}
+
+.welcome-heading {
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  color: #ff00ff;
+  text-shadow: 4px 4px 0 #00ffff;
+  margin-bottom: 2rem;
+  animation: pixelGlitch 0.5s infinite;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.new-post-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.new-post-form input {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+  padding: clamp(0.6rem, 1.5vw, 1rem);
+  background: #000;
+  color: #fff;
+  border: 4px solid #00ffff;
+  box-shadow: 4px 4px 0 #ff00ff;
+  flex: 1;
+  outline: none;
+}
+
+.new-post-form button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+  padding: clamp(0.6rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.5rem);
+  background: #000;
+  color: #fff;
+  border: 4px solid #00ffff;
+  box-shadow: 4px 4px 0 #ff00ff;
+  cursor: pointer;
+  transition: all 0.1s;
+  min-width: 120px;
+}
+
+.new-post-form button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #ff00ff;
+  background: #ff00ff;
+  color: #000;
+}
+
+.new-post-form button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 #ff00ff;
+}
+
+.feed {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@keyframes pixelGlitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

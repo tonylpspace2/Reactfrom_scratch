@@ -1,0 +1,119 @@
+.about-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #000;
+  border: 4px solid #0ff;
+  box-shadow: 0 0 20px #f0f;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.about-heading {
+  color: #0ff;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 4px 4px 0 #f0f;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about-section {
+  background-color: #111;
+  padding: 2rem;
+  border: 2px solid #0ff;
+}
+
+.section-title {
+  color: #0ff;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 0 #f0f;
+}
+
+.section-text {
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #222;
+  border: 2px solid #0ff;
+}
+
+.member-avatar {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.team-member h3 {
+  color: #0ff;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  color: #fff;
+  font-size: 0.7rem;
+}
+
+.join-button {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 1rem 2rem;
+  background-color: #0ff;
+  color: #000;
+  border: none;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+
+.join-button:hover {
+  background-color: #f0f;
+  transform: scale(1.05);
+}
+
+.join-button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .about-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1rem;
+  }
+
+  .section-text {
+    font-size: 0.7rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+} 
